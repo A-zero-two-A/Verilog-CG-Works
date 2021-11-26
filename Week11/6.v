@@ -14,6 +14,4 @@ module top_module (
 
 	assign z = w1 ^ w2;
 
-
-
 endmodule
