@@ -10,7 +10,7 @@ reg out;
 
 always @ (*)
 begin
-    if(sel == 1'b1)
+    if(sel == 1'b0)
         out = a;
     else
         out = b;

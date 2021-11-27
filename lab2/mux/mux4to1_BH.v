@@ -8,8 +8,8 @@ output out;
 reg out;
 
 
-mux2to1_BH mux0(.a(a),.b(b));
-mux2to1_BH mux1(.a(c),.b(d));
+mux2to1_BH mux0(.a(a),.b(b),.sel(sel0));
+mux2to1_BH mux1(.a(c),.b(d),.sel(sel0));
 always @(*) begin
 	if(sel1)
 		out = mux1.out;

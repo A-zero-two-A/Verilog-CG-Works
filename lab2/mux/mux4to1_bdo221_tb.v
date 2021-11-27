@@ -13,10 +13,19 @@ module top_module ();
 
 		clk = 1'b0;
 		a = 1'b1;
-		b = 1'b1;
+		b = 1'b0;
 		c = 1'b0;
+		d = 1'b1;
+		sel = 2'b00;
+		#5 sel = 2'b01;
+		#5 sel = 2'b10;
+		#5 sel = 2'b11;
+		#5
+		a = 1'b1;
+		b = 1'b0;
+		c = 1'b1;
 		d = 1'b0;
-		sel = 1'b00;
+		sel = 2'b00;
 		#5 sel = 2'b01;
 		#5 sel = 2'b10;
 		#5 sel = 2'b11;
@@ -25,13 +34,13 @@ module top_module ();
 	always #5 clk <= ~clk;
 	
 	mux4to1 mux4to1(
-			.a   (a),
-			.b   (b),
-			.c   (c),
-			.d   (d),
+			.a(a),
+			.b(b),
+			.c(c),
+			.d(d),
 			.sel0(sel[0]),
 			.sel1(sel[1]),
-			.out (out)
+			.out(out)
 		);
 
 

@@ -7,8 +7,8 @@ input a,b,c,d,sel1,sel0;
 output out;
 
 
-mux2to1_BH mux0(.a(a),.b(b));
-mux2to1_BH mux1(.a(c),.b(d));
+mux2to1_BH mux0(.a(a),.b(b),.sel(sel0));
+mux2to1_BH mux1(.a(c),.b(d),.sel(sel0));
 
 assign out = sel1 ? mux1.out : mux0.out;
 
