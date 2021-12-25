@@ -33,6 +33,6 @@ module counter (
     // end
 
     assign num = num_temp;
-    keyled keyled(clk, sw_add, sw_add_led);
+    // keyled keyled(clk, sw_add, sw_add_led);
 
 endmodule

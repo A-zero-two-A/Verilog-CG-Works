@@ -5,7 +5,7 @@ module GPU_tb ();
     reg sw_add;
     reg sw_left;
     reg enable;
-    output [19:0]dataBus;
+    output [31:0]dataBus;
 
 
     initial begin

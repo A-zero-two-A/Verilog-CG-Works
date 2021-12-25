@@ -18,7 +18,7 @@ module GPU(
         
     end
 
-    always @ (posedge clk3hz) begin
+    always @ (posedge clk3hz ) begin
         
         if(!clr)
             if(curPage=='b1)
