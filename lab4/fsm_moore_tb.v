@@ -14,6 +14,8 @@ module seqdetea_tb (
         .dout(dout)
     );
     initial begin
+        $dumpfile("wave.vcd");
+        $dumpvars(0, seqdetea_tb);
         clk = 0;
         forever begin
             #(PERIOD/2) clk = 1;
