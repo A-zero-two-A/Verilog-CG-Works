@@ -1,3 +1,25 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2021/12/09 15:42:26
+// Design Name: 
+// Module Name: fsm_mealy
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
 module seqdetea (
     input wire clk,
     input wire clr,
@@ -5,7 +27,7 @@ module seqdetea (
     output reg dout
 );
     reg [2:0] present_state , next_state;
-    parameter  S0 = 3'b000,S1 = 3'b001,S2 =3'b010,S3 = 3'b011,S4 = 3'b100,S5 = 3'b101;   
+    parameter  S0 = 3'b000,S1 = 3'b001,S2 =3'b010,S3 = 3'b011,S4 = 3'b100,S5 = 3'b101;
     always @(posedge clk or posedge clr) begin
         if (clr == 1)
         present_state <= S0;
@@ -38,8 +60,9 @@ module seqdetea (
                     next_state <= S2;
                 else 
                     next_state <= S0;
-        endcase
+    endcase
     end
+    
     always @(*) begin
         if(present_state == S5)
         dout <= 1;

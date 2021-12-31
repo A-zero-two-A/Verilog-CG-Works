@@ -1,3 +1,25 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2021/12/09 15:54:51
+// Design Name: 
+// Module Name: fsm_mealy_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
 module seqdetea_tb (
     
     
@@ -6,7 +28,7 @@ module seqdetea_tb (
     reg clr;
     reg din;
     wire dout;
-    parameter PERIOD = 100;
+    parameter PERIOD = 40;
     seqdetea seqdetea(
         .clk(clk),
         .clr(clr),
@@ -29,19 +51,27 @@ module seqdetea_tb (
         end
     end
     initial begin
-        din = 1;
-        #50 din = 0;
-        #50 din = 1;
-        #100 din = 0;
-        #50 din = 1;
-        #50 din = 0;
-        #100 din = 1;
-        #50 din = 0;
-        #200 din = 1;
-        #50 din = 0;
-        #150 din = 1;
-        #50 din = 0;
-        #150 din = 1;
-        #100 din = 0;
+        din = 0;
+        #80 din = 1;
+        #40 din = 1;
+        #40 din = 0;
+        #40 din = 1;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 1;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 1;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 1;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 0;
+        #40 din = 1;
+        #40 din = 1;
     end
 endmodule
